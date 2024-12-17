@@ -31,3 +31,4 @@ else:
     res = msg.direct_map('MSH', 'PID', 'PV1-1', 'PV1-2', 'PV1-3', 'PV1-6.1')
     control_id = res.get_field('MSH-10').value
     print(f'control id={control_id}')
+
