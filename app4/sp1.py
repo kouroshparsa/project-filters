@@ -4,8 +4,8 @@ from hl7_tea import Message
 ADT_LUT = ["A01","A02","A03","A04","A05","A06","A07","A08","A11","A12","A13","A17","A31","A38","A40","A41","A44"]
 
 try:
-    from cache_helper import redis_client
-    ADT_LUT = redis_client.get('ADT_TriggerEvents')
+    import lookup
+    ADT_LUT = lookup.get_lut('ADT_TriggerEvents')
     print(ADT_LUT)
 except Exception as ex:
     print(f'ADT_TriggerEvents is not set for the app. {ex}')
