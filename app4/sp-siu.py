@@ -1,11 +1,11 @@
 import os
 from hl7_tea import Message
 
-ADT_LUT = ["S12","S13","S14","S15","S23","S26"]
+SIU_LUT = ["S12","S13","S14","S15","S23","S26"]
 
 try:
     import lookup
-    ADT_LUT = lookup.get_lut('SIU_TriggerEvents')
+    SIU_LUT = lookup.get_lut('SIU_TriggerEvents')
 except Exception as ex:
     print(f'SIU_TriggerEvents is not set for the app. {ex}')
 
