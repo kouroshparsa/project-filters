@@ -22,6 +22,7 @@ msg.promote({'message_type': 'MSH-9.1',
              'trigger_event': 'MSH-9.2'})
 print('message_type=', msg.message_type)
 
+print('filter res=', filter_message(msg))
 if not filter_message(msg):
     res = None
     print('filtered out')
