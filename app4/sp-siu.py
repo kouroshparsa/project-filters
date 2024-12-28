@@ -11,6 +11,8 @@ except Exception as ex:
 
 def filter_message(msg: Message):
     if msg.message_type == 'SIU':
+        if msg.trigger_event not in SIU_LUT:
+            print(msg.trigger_event, ' is not in',  SIU_LUT)
         return msg.trigger_event in SIU_LUT
     return False
 
