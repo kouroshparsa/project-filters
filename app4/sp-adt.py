@@ -13,7 +13,10 @@ def filter_message(msg: Message):
     if msg.message_type == 'ADT':
         if msg.trigger_event not in ADT_LUT:
             print(msg.trigger_event, ' is not in',  ADT_LUT)
-        return msg.trigger_event in ADT_LUT
+        else:
+            return True
+    else:
+        print('Messages type is not ADT:', msg.message_type)
     return False
 
 
