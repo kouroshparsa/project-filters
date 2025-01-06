@@ -31,7 +31,7 @@ else:
                          'AIS-1', 'AIS-3',
                          'ZAL-1')
 
-    for zfh in msg.segments['ZFH']:
+    for zfh in msg.segments.get('ZFH', []):
         if zfh[1] == 'Savience':
             res.segments['ZFH'].append(['', zfh[2], zfh[3], '', zfh[5]])
         elif zfh[1] == 'CVC':
